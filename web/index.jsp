@@ -19,9 +19,9 @@
         %>
         <h1 align="center">首页</h1>
         <div align="center">
-            <a href="login.html"class="btn btn-default ">管理员登陆</a>
+            <a href="admin/login.html"class="btn btn-default ">管理员登陆</a>
             <a href="user/login.html" class="btn btn-default ">用户登陆</a>
-            <a href="newuser"class="btn btn-default ">用户注册</a>
+            <a href="newuser.html"class="btn btn-default ">用户注册</a>
         </div>
     </body>
 </html>

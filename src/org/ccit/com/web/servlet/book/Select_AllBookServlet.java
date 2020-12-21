@@ -17,14 +17,14 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.List;
 
-/**
+/****
  * @program: JavaWeb-code
  * @description
  * @author: Jiadong Duan
  * @create: 2020-11-11 11:15
  **/
-@WebServlet("/booklistServlet")
-public class BookListServlet extends HttpServlet {
+@WebServlet("/Select_AllBookServlet")
+public  class Select_AllBookServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         /**
          * @Description: 从前端传回的数据 返回对应的book列表 和实现分页
@@ -42,27 +42,31 @@ public class BookListServlet extends HttpServlet {
             result +=(char)respInt;
             respInt = insr.read();
         }
+//        System.out.println(result);
         JSONObject object = new JSONObject(result);
         String opr=object.getString("opr");
-
+        System.out.println(opr);
         int pageSize=object.getInt("pageSize");
-        //热门查询
+        String bookauthor=object.getString("bookauthor");
+        String bookname=object.getString("bookname");
+
+
+
         BookDao bookDao = new BookDao();
+        List<Book> books = bookDao.select_BookList(opr,bookname,bookauthor);
 
 
-
-        List<Book> books = bookDao.PopularBookList();
         int count =books.size();
+
         int totalPage=count/pageSize;
         if(count%pageSize!=0){
             totalPage++;
         }
+
         JSONArray jsonArray=new JSONArray(books);
         response.setContentType("text/json;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-
-
         JSONObject jsonObject= new JSONObject("{\'count\':"+count+", \'totalPage\':"+totalPage+", \'data\':"+jsonArray.toString()+"}");
         out.write(jsonObject.toString());
         out.flush();

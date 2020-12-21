@@ -1,8 +1,8 @@
 package org.ccit.com.web.servlet;
 
-import org.ccit.com.dao.UserDao;
-import org.ccit.com.domain.packaging.User;
 import org.apache.commons.beanutils.BeanUtils;
+import org.ccit.com.dao.AdminDao;
+import org.ccit.com.domain.packaging.Admin;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,8 +15,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 
-@WebServlet("/user_loginServlet")
-public class UserLoginServlet extends HttpServlet {
+@WebServlet("/Admain_loginServlet")
+public class AdmainLoginServlet extends HttpServlet {
 
 
     @Override
@@ -30,10 +30,10 @@ public class UserLoginServlet extends HttpServlet {
 //        User user = new User();
 //        user.setUser_name(username);
 //        user.setUser_pwd(password);
-        User user = new User();
+        Admin admin=new Admin();
         Map<String, String[]> map = req.getParameterMap();
         try {
-            BeanUtils.populate(user,map);
+            BeanUtils.populate(admin,map);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
@@ -51,25 +51,23 @@ public class UserLoginServlet extends HttpServlet {
 //        } catch (IllegalAccessException | InvocationTargetException e) {
 //            e.printStackTrace();
 //        }
-
-        System.out.println("------------------------------------");
-        System.out.println(user.getUser_name());
         //4.调用UserDao的login方法
-        UserDao dao = new UserDao();
-        User user_test = dao.userlogin(user);
+        AdminDao dao = new AdminDao();
+        Admin admin_test = dao.Adminlogin(admin);
 
         //5.判断user
-        if(user_test == null){
+        if(admin_test == null){
             //登录失败
-            req.getRequestDispatcher("/user/login.html").forward(req,resp);
+            req.getRequestDispatcher("/failServlet").forward(req,resp);
         }else{
             //登录成功
             //存储数据
             HttpSession session = req.getSession();
-            session.setAttribute("user",user_test);
+            session.setAttribute("admin",admin_test);
             //转发
-            req.getRequestDispatcher("/user/index.jsp").forward(req,resp);
+            req.getRequestDispatcher("/admin/index.jsp").forward(req,resp);
         }
+
     }
 
     @Override

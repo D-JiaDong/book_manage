@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>注册</title>
+        <script type="text/javascript" src="/static/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="/static/user.js"></script>
+        <script type="text/javascript" src="/static/bootstrap/bootstrap-fileinput/fileinput.min.js"></script>
+        <script type="text/javascript" src="/static/bootstrap/bootstrap-fileinput/locales/zh.js"></script>
+        <link href="/static/bootstrap/bootstrap-fileinput/fileinput.min.css" rel="stylesheet" />
+
+    </head>
+    <body>
+        <div style="horiza-align: center; width:100%;" align="center">
+            <form action="/newUserServlet" method="post"  enctype="application/x-www-form-urlencoded" name="regForm" accept-charset="UTF-8">
+
+
+                <table>
+                    <caption>
+<!--                        {% if success == 0 %}-->
+<!--                        注册失败，请确认账号-->
+<!--                        {% endif %}-->
+                    </caption>
+                    <tr align="center">
+                        <td colspan="2"><h2>用户注册</h2></td>
+                    </tr>
+                    <tr>
+                        <td>用户名：</td>
+                        <td><input type="text" name="user_name" onblur="checkUserName()"/></td>
+                    </tr>
+                    <tr>
+                        <td>密码：</td>
+                        <td><input type="password" name="user_pwd" onblur="checkUserPwd()"/></td>
+                    </tr>
+                    <tr>
+                        <td>重复密码：</td>
+                        <td><input type="password" name="reUserPwd" onblur="checkUserRepwd()"/></td>
+                    </tr>
+                    <tr>
+                        <td>性别：</td>
+                        <td><input type="text" name="user_sex"/></td>
+                    </tr>
+                    <tr>
+                        <td>年龄：</td>
+                        <td><input type="text" name="user_age"/></td>
+                    </tr>
+                    <tr>
+                        <td>手机号码：</td>
+                        <td><input type="text" name="user_tel"/></td>
+                    </tr>
+                    <tr>
+                        <td>个人头像：</td>
+                        <td>
+                            <input type="hidden" id="picname" name="picname"/>
+                            <input type="hidden" id="picsrc" name="picsrc"/>
+                            <img src="/static/image/默认.png" alt="选择并上传头像" id="user_pic"
+                                 style="width: 140px;height: 140px;left:0;top: 0;"/><br>
+                            <input type="file" id="user_fpic"
+                                   accept="image/png,image/gif,image/jpg"/>
+                        </td>
+                    </tr>
+
+                            <script>
+                                // 头像预览
+                                $("#user_fpic").change(function () {
+                                    // 获取上传文件对象
+                                    var file = $(this)[0].files[0];
+                                    alert(file.name)
+                                    $("#picname").val(file.name)
+                                    // 读取文件URL
+                                    var reader = new FileReader();
+                                    reader.readAsDataURL(file);
+                                    // 阅读文件完成后触发的事件
+                                    reader.onload = function () {
+                                        alert(this.result)
+                                        // 读取的URL结果：this.result
+                                        $("#picsrc").val(this.result)
+                                        $("#user_pic").attr("src", this.result);
+                                    }
+                                });
+                            </script>
+                    <tr>
+                        <td>个人介绍：</td>
+                        <td>
+                            <textarea name="user_intro" cols="50" rows="10"></textarea>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2">
+                            <input type="reset" value="重置"/>
+                            <input type="submit" value="提交"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

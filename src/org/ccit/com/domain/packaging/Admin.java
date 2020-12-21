@@ -7,6 +7,16 @@ public class Admin {
     private int Adm_age;
     private String Adm_tel;
 
+    public String getAdm_pic() {
+        return Adm_pic;
+    }
+
+    public void setAdm_pic(String adm_pic) {
+        Adm_pic = adm_pic;
+    }
+
+    private String Adm_pic;
+
     public String getAdm_tel() {
         return Adm_tel;
     }

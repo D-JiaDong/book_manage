@@ -13,7 +13,6 @@ import java.io.IOException;
 public class SuccessServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //获取request域中共享的user对象
-        System.out.println("asdf");
         User user = (User) request.getAttribute("user");
 
         if(user != null){

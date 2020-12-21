@@ -27,7 +27,18 @@
                         <span>首页展板</span>
                     </a>
                 </li>
-                <li><a href="#">查找图书</a></li>
+                <li id="select_Li">
+                    <a id="select_a" href="javascript: void(0);" class="has-arrow waves-effect"><span>查找图书</span></a>
+                    <ul id="select_ul" class="sub-menu mm-collapse" aria-expanded="false">
+                        <li id="all"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=all">全部</a></li>
+                        <li id="sanwen"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=sanwen">散文</a></li>
+                        <li id="suibi"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=suibi">随笔</a></li>
+                        <li id="xiaoshuo"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=xiaoshuo">小说</a></li>
+                        <li id="kepu"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=kepu">科普</a></li>
+                        <li id="biancheng"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=biancheng">编程</a></li>
+                    </ul>
+                </li>
+                <li><a href="select_book.jsp">查找图书</a></li>
                 <li><a href="#">借阅图书</a></li>
                 
         

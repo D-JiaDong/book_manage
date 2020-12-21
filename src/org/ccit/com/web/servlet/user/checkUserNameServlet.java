@@ -1,10 +1,5 @@
-package org.ccit.com.web.servlet.book;
-
-
-
-import org.ccit.com.dao.BookDao;
-import org.ccit.com.domain.packaging.Book;
-import org.json.JSONArray;
+package org.ccit.com.web.servlet.user;
+import org.ccit.com.dao.UserDao;
 import org.json.JSONObject;
 
 import javax.servlet.ServletException;
@@ -15,25 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.List;
 
 /**
- * @program: JavaWeb-code
+ * @program: book_manage
  * @description
  * @author: Jiadong Duan
- * @create: 2020-11-11 11:15
+ * @create: 2020-12-19 12:17
  **/
-@WebServlet("/booklistServlet")
-public class BookListServlet extends HttpServlet {
+@WebServlet("/checkUserNameServlet")
+public class checkUserNameServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        /**
-         * @Description: 从前端传回的数据 返回对应的book列表 和实现分页
-         * @param request
-         * @param response
-         * @return: void
-         * @Author: Jiadong Duan
-         * @Date: 2020/11/12 18:33
-         */
         request.setCharacterEncoding("utf-8");
         InputStreamReader insr = new InputStreamReader(request.getInputStream(),"utf-8");
         String result = "";
@@ -42,28 +28,18 @@ public class BookListServlet extends HttpServlet {
             result +=(char)respInt;
             respInt = insr.read();
         }
+//        System.out.println(result);
         JSONObject object = new JSONObject(result);
-        String opr=object.getString("opr");
+        String user_name=object.getString("user_name");
 
-        int pageSize=object.getInt("pageSize");
-        //热门查询
-        BookDao bookDao = new BookDao();
-
+        UserDao userDao = new UserDao();
+        int isexist=userDao.check_Username(user_name);
 
 
-        List<Book> books = bookDao.PopularBookList();
-        int count =books.size();
-        int totalPage=count/pageSize;
-        if(count%pageSize!=0){
-            totalPage++;
-        }
-        JSONArray jsonArray=new JSONArray(books);
         response.setContentType("text/json;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-
-
-        JSONObject jsonObject= new JSONObject("{\'count\':"+count+", \'totalPage\':"+totalPage+", \'data\':"+jsonArray.toString()+"}");
+        JSONObject jsonObject= new JSONObject("{\'isexist\':"+isexist+"}");
         out.write(jsonObject.toString());
         out.flush();
         out.close();
@@ -73,7 +49,6 @@ public class BookListServlet extends HttpServlet {
         //JSONObject jsonRet = JSONObject.
 
         //4.调用UserDao的login方法
-
 
     }
 

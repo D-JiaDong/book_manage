@@ -9,6 +9,16 @@ public class User {
     private String user_pwd;
     private String user_pic;
 
+    public String getUser_intro() {
+        return user_intro;
+    }
+
+    public void setUser_intro(String user_intro) {
+        this.user_intro = user_intro;
+    }
+
+    private String user_intro;
+
     public String getUser_pic() {
         return user_pic;
     }
