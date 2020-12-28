@@ -1,5 +1,6 @@
 package org.ccit.com.dao;
 
+import org.ccit.com.domain.packaging.Admin;
 import org.ccit.com.domain.packaging.Book;
 import org.ccit.com.domain.packaging.User;
 import org.ccit.com.util.JDBCUtils;
@@ -57,7 +58,6 @@ public class UserDao {
     public int check_Username(String user_name){
         List<User> result=null;
         try {
-            System.out.println(user_name);
             //1.编写sql
             String sql = "select * from t_user where User_name =?";
             //2.调用query方法
@@ -68,6 +68,20 @@ public class UserDao {
             e.printStackTrace();//记录日志
             return -1;
         }
+    }
+    public List<User> select_UserList(String username,String usertel){
+        List<User> userquery=null;
+        String sql = "select * from t_user";
+        sql+=" where 1";
+        if (!"".equals(username)){
+            sql+=" and User_name="+"\'"+username+"\'";
+        }
+        if(!"".equals(usertel)){
+            sql+=" and User_tel="+"\'"+usertel+"\'";
+        }
+        System.out.println(sql);
+        userquery = template.query(sql, new BeanPropertyRowMapper<>(User.class));
+        return userquery;
     }
 
 }

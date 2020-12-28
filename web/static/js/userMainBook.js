@@ -27,15 +27,14 @@ function hotbook(pageSize, currentPage, opr) {
 
                 text = ""
                 bodyObj.empty()
-                for (i = (currentPage-1)*pageSize,j=0; i < data.data.length,j<pageSize;i++,j++) {
-                    text += "<tr><td>" + data.data[i].book_id + "</td>" +
-                        "<td>" + data.data[i].book_name + "</td>" +
-                        "<td>" + + "</td>" +
-                        "<td>" + + "</td>" +
-                        "<td>" + data.data[i].book_author + "</td>" +
-                        "<td>" + data.data[i].book_price + "</td>" +
-                        "<td>" + data.data[i].book_num + "</td>"
-
+                for ( i = (currentPage-1)*pageSize,j=0; i < data.data.length&&j<pageSize;i++,j++) {
+                    text += "<tr><td>" + data.data[i]["book_id"] + "</td>" +
+                        "<td>" + data.data[i]["book_name"] + "</td>" +
+                        "<td>" + +"</td>" +
+                        "<td>" + +"</td>" +
+                        "<td>" + data.data[i]["book_author"] + "</td>" +
+                        "<td>" + data.data[i]["book_price"] + "</td>" +
+                        "<td>" + data.data[i]["book_num"] + "</td>"
                 }
                 bodyObj.append(text)
 
@@ -63,6 +62,27 @@ function hotbook(pageSize, currentPage, opr) {
                 footObj.append(pageText) // DOM  innerHTML
 
 
+                //查询的分类菜单
+                select_ul = $('#select_ul')
+                select_ul.empty()
+                leftselectText='<li id="all"><a href="../user/select_book.jsp?opr=all">全部</a></li>'
+                for(i=0;i<data.booktypes.length;i++){
+                    leftselectText+='<li id="sanwen"><a href="../user/select_book.jsp?opr='+data.booktypes[i].type_id+'">'+data.booktypes[i].type_name+'</a></li>'
+                }
+                select_ul.append(leftselectText) // DOM  innerHTML
+
+                //借阅管理菜单
+                borrow_ul = $('#borrow_ul')
+                borrow_ul.empty()
+                leftborrowText='<li id="all"><a href="../user/borrow_book.jsp?opr=all">全部</a></li>'
+                for(i=0;i<data.booktypes.length;i++){
+                    leftborrowText+='<li id="sanwen"><a href="../user/borrow_book.jsp?opr='+data.booktypes[i].type_id+'">'+data.booktypes[i].type_name+'</a></li>'
+                }
+                borrow_ul.append(leftborrowText) // DOM  innerHTML
+
+
+
+                
                 var obj = document.getElementById('pageSize');
                 for (i = 0; i < obj.length; i++) {
                     if (obj[i].value == pageSize)

@@ -9,6 +9,7 @@
 <%@include file="header.jsp"%>
 <%@include file="left.jsp"%>
 <%@include file="topbar.jsp"%>
+
 <html>
     <head>
         <title>index</title>
@@ -21,13 +22,39 @@
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
+                        
+<%--                            <div class="page-title-box d-flex align-items-center justify-content-between">--%>
+<%--                                <h4 class="mb-0 font-size-18">热门图书</h4>--%>
+<%--                            </div>--%>
                             <div class="page-title-box d-flex align-items-center justify-content-between">
-                                <h4 class="mb-0 font-size-18">热门图书</h4>
+                                <form action="#" method="post" name="bookForm" class="form-inline">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="form-group" style="display: inline;">
+                                                <label for="bookname"  class="control-label" style="display: inline;">书名:</label>
+                                                <input type="text" id="bookname" name="bookname" value="" class="form-control-sm" style="display: inline;"/>
+                                            </div>
+                
+                                            <div class="form-group" style="display: inline;">
+                                                <label for="bookauthor"  class="control-label" style="display: inline;">作者:</label>
+                                                <input type="text" id="bookauthor" name="bookauthor" value="" class="form-control-sm" style="display: inline;"/>
+                                            </div>
+                                            
+                                            <div class="form-group" style="display: inline;">
+                                                <input type="reset" class="btn btn-default pull-left" onclick="clearSearch()" value="取消"/>
+                                                <%
+                                                    String opr = request.getParameter("opr");
+                                                %>
+                                                <input type="button" class="btn btn-primary" onclick="allbook(8,1,'<%= opr%>')" value="查询"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                     <!-- end page title -->
-                
+                   
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
@@ -81,4 +108,10 @@
     </body>
 </html>
 <%@include file="bottom.html"%>>
-<script type="text/javascript" src="../static/js/adminMainBook.js" ></script>
+<script>
+    function clearSearch() {
+        document.bookForm.bookauthor.value = ""
+        document.bookForm.bookname.value=""
+    }
+</script>
+<script type="text/javascript" src="../static/js/adminselect_allbook.js" ></script>

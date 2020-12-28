@@ -27,8 +27,8 @@ import java.util.List;
  * @author: Jiadong Duan
  * @create: 2020-11-11 11:15
  **/
-@WebServlet("/Select_AllBookServlet")
-public  class Select_AllBookServlet extends HttpServlet {
+@WebServlet("/Select_ISborrowBookServlet")
+public  class Select_ISborrowBookServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         /**
          * @Description: 从前端传回的数据 返回对应的book列表 和实现分页
@@ -47,7 +47,6 @@ public  class Select_AllBookServlet extends HttpServlet {
             respInt = insr.read();
         }
         JSONObject object = new JSONObject(result);
-        String type=object.getString("type");
         int book_id=0;
         String opr="select";
         int book_num = 0;
@@ -70,7 +69,7 @@ public  class Select_AllBookServlet extends HttpServlet {
             borrow_result=bookDao.borrow_book(book_id,book_num-1,user.getUser_id());
         }
 
-        List<Book> books = bookDao.select_BookList(type,bookname,bookauthor);
+        List<Book> books = bookDao.select_ISborrowBookList(bookname,bookauthor,user.getUser_id());
 
         BookTypeDao bookTypeDao = new BookTypeDao();
         List<Booktype> booktypes= bookTypeDao.BooktypeList();

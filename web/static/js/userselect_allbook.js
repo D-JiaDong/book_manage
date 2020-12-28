@@ -1,9 +1,8 @@
-function allbook(pageSize, currentPage, opr) {
+function allbook(pageSize, currentPage, type) {
     try {
 
         var search = window.location.search;
-        var Opr=search.split('=')
-        opr=Opr[1]
+        type=search.split('=')[1]
         if(window.location.href.indexOf("select_book.jsp")>=0)
         {
             select_Li=document.getElementById("select_Li")
@@ -35,7 +34,7 @@ function allbook(pageSize, currentPage, opr) {
         url: '/Select_AllBookServlet',
         type: 'POST',
         data: JSON.stringify({
-            opr: opr,
+            type:type,
             pageSize: pageSize,
             bookauthor: bookauthor,
             bookname: bookname,
@@ -73,10 +72,10 @@ function allbook(pageSize, currentPage, opr) {
                     '                <td colspan="8">' +
                     '                   总共有' + count + '条 总共有' + totalPage + '页' +
                     '                   当前第' + currentPage + '页' +
-                    '                    <a href="javascript:allbook(' + pageSize + ',' + 1 + ',\'PopularSearch\')" >首页</a>' +
-                    '                    <a href="javascript:allbook(' + pageSize + ',' + (currentPage <= 1 ? 1 : currentPage - 1)+ ',\'PopularSearch\')" >上一页</a>' +
-                    '                    <a href="javascript:allbook(' + pageSize + ',' + (currentPage >= totalPage ? totalPage : currentPage + 1)  + ',\'PopularSearch\')" >下一页</a>' +
-                    '                    <a href="javascript:allbook(' + pageSize + ',' + totalPage +',\'PopularSearch\')">尾页</a>' +
+                    '                    <a href="javascript:allbook(' + pageSize + ',' + 1 + ',\'all\')" >首页</a>' +
+                    '                    <a href="javascript:allbook(' + pageSize + ',' + (currentPage <= 1 ? 1 : currentPage - 1)+ ',\'all\')" >上一页</a>' +
+                    '                    <a href="javascript:allbook(' + pageSize + ',' + (currentPage >= totalPage ? totalPage : currentPage + 1)  + ',\'all\')" >下一页</a>' +
+                    '                    <a href="javascript:allbook(' + pageSize + ',' + totalPage +',\'all\')">尾页</a>' +
                     '                    <select name="pageSize" id="pageSize">' +
                     '                    <option value=\'3\'>3</option>' +
                     '                    <option value=\'5\' >5</option>' +
@@ -86,6 +85,24 @@ function allbook(pageSize, currentPage, opr) {
                     '                </td>' +
                     '            </tr>'
                 footObj.append(pageText) // DOM  innerHTML
+
+                //查询的分类菜单
+                select_ul = $('#select_ul')
+                select_ul.empty()
+                leftselectText='<li id="all"><a href="../user/select_book.jsp?opr=all">全部</a></li>'
+                for(i=0;i<data.booktypes.length;i++){
+                    leftselectText+='<li id="sanwen"><a href="../user/select_book.jsp?opr='+data.booktypes[i].type_id+'">'+data.booktypes[i].type_name+'</a></li>'
+                }
+                select_ul.append(leftselectText) // DOM  innerHTML
+
+                //借阅管理菜单
+                borrow_ul = $('#borrow_ul')
+                borrow_ul.empty()
+                leftborrowText='<li id="all"><a href="../user/borrow_book_manage.jsp?opr=all">全部</a></li>'
+                for(i=0;i<data.booktypes.length;i++){
+                    leftborrowText+='<li id="sanwen"><a href="../user/borrow_book.jsp?opr='+data.booktypes[i].type_id+'">'+data.booktypes[i].type_name+'</a></li>'
+                }
+                borrow_ul.append(leftborrowText) // DOM  innerHTML
 
 
                 var obj = document.getElementById('pageSize');
@@ -101,7 +118,7 @@ $(document).ready(
     function(){
 
         var search = window.location.search;
-        var opr=search.split('=')
-        allbook(8,1,opr[1])
+        var type=search.split('=')[1]
+        allbook(8,1,type)
     }
 )

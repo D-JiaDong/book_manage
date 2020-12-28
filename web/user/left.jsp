@@ -30,18 +30,28 @@
                 <li id="select_Li">
                     <a id="select_a" href="javascript: void(0);" class="has-arrow waves-effect"><span>查找图书</span></a>
                     <ul id="select_ul" class="sub-menu mm-collapse" aria-expanded="false">
-                        <li id="all"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=all">全部</a></li>
-                        <li id="sanwen"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=sanwen">散文</a></li>
-                        <li id="suibi"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=suibi">随笔</a></li>
-                        <li id="xiaoshuo"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=xiaoshuo">小说</a></li>
-                        <li id="kepu"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=kepu">科普</a></li>
-                        <li id="biancheng"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=biancheng">编程</a></li>
+<%--                        <li id="all"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=all">全部</a></li>--%>
+<%--                        <li id="sanwen"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=sanwen">散文</a></li>--%>
+<%--                        <li id="suibi"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=suibi">随笔</a></li>--%>
+<%--                        <li id="xiaoshuo"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=xiaoshuo">小说</a></li>--%>
+<%--                        <li id="kepu"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=kepu">科普</a></li>--%>
+<%--                        <li id="biancheng"><a href="${pageContext.request.contextPath}/user/select_book.jsp?opr=biancheng">编程</a></li>--%>
                     </ul>
                 </li>
-                <li><a href="select_book.jsp">查找图书</a></li>
-                <li><a href="#">借阅图书</a></li>
+                <li id="borrow_Li">
+                    <a id="borrow_a" href="javascript: void(0);" class="has-arrow waves-effect"><span>借阅图书</span></a>
+                    <ul id="borrow_ul" class="sub-menu mm-collapse" aria-expanded="false">
+<%--                        <li id="borrow_all"><a href="${pageContext.request.contextPath}/user/borrow_book.jsp?opr=all">全部</a></li>--%>
+<%--                        <li id="borrow_sanwen"><a href="${pageContext.request.contextPath}/user/borrow_book.jsp?opr=sanwen">散文</a></li>--%>
+<%--                        <li id="borrow_suibi"><a href="${pageContext.request.contextPath}/user/borrow_book.jsp?opr=suibi">随笔</a></li>--%>
+<%--                        <li id="borrow_xiaoshuo"><a href="${pageContext.request.contextPath}/user/borrow_book.jsp?opr=xiaoshuo">小说</a></li>--%>
+<%--                        <li id="borrow_kepu"><a href="${pageContext.request.contextPath}/user/borrow_book.jsp?opr=kepu">科普</a></li>--%>
+<%--                        <li id="borrow_biancheng"><a href="${pageContext.request.contextPath}/user/borrow_book.jsp?opr=biancheng">编程</a></li>--%>
+                    </ul>
+                </li>
                 
-        
+                <li ><a href="../user/ISborrow_book.jsp">已借图书</a></li>
+                
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect"><span>更多功能</span></a>
                     <ul class="sub-menu mm-collapse" aria-expanded="false">
@@ -53,7 +63,6 @@
                 </li>
             
             </ul>
-          
         </div>
         <!-- Sidebar -->
     </div>

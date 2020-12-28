@@ -25,7 +25,7 @@
                                 <div class="card-body">
                                     <div class="dropdown float-right position-relative">
                                         <a href="#" class="dropdown-toggle h4 text-muted" data-toggle="dropdown"
-                                           aria-expanded="false">
+                                            aria-expanded="false">
                                             <i class="mdi mdi-dots-vertical"></i>
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-right">

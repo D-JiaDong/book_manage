@@ -31,25 +31,21 @@
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <div class="form-group" style="display: inline;">
-                                                <label for="bookname"  class="control-label" style="display: inline;">书名:</label>
-                                                <input type="text" id="bookname" name="bookname" value="" class="form-control-sm" style="display: inline;"/>
+                                                <label for="username"  class="control-label" style="display: inline;">用户姓名:</label>
+                                                <input type="text" id="username" name="username" value="" class="form-control-sm" style="display: inline;"/>
                                             </div>
                 
                                             <div class="form-group" style="display: inline;">
-                                                <label for="bookauthor"  class="control-label" style="display: inline;">作者:</label>
-                                                <input type="text" id="bookauthor" name="bookauthor" value="" class="form-control-sm" style="display: inline;"/>
+                                                <label for="usertel"  class="control-label" style="display: inline;">用户电话:</label>
+                                                <input type="text" id="usertel" name="usertel" value="" class="form-control-sm" style="display: inline;"/>
                                             </div>
                                             
                                             <input type="hidden" name="currentPage" value="1"/>
-                                            <input type="hidden" name="blogId"/>
                                             <input type="hidden" name="userId" value="{{ request.session.user.userId }}"/>
                                             <input type="hidden" name="opr" value="search"/>
                                             <div class="form-group" style="display: inline;">
                                                 <input type="reset" class="btn btn-default pull-left" onclick="clearSearch()" value="取消"/>
-                                                <%
-                                                    String opr = request.getParameter("opr");
-                                                %>
-                                                <input type="button" class="btn btn-primary" onclick="allbook(8,1,'<%= opr%>')" value="查询"/>
+                                                <input type="button" class="btn btn-primary" onclick="alluser(8,1)" value="查询"/>
                                             </div>
                                         </div>
                                     </div>
@@ -67,13 +63,12 @@
                                         <table class="table activate-select dt-responsive nowrap table table-hover" >
                                             <thead>
                                             <tr>
-                                                <th>书籍ID</th>
-                                                <th>名称</th>
-                                                <th>简介</th>
-                                                <th>类型</th>
-                                                <th>作者</th>
-                                                <th>价格</th>
-                                                <th>数量</th>
+                                                <th>头像</th>
+                                                <th>用户ID</th>
+                                                <th>用户名称</th>
+                                                <th>年龄</th>
+                                                <th>用户电话</th>
+                                                <th>个人介绍</th>
                                             </tr>
                                             </thead>
                                             <tbody id="bodyData">
@@ -114,8 +109,8 @@
 <%@include file="bottom.html"%>>
 <script>
     function clearSearch() {
-        document.bookForm.bookauthor.value = ""
-        document.bookForm.bookname.value=""
+        document.bookForm.usertel.value = ""
+        document.bookForm.username.value=""
     }
 </script>
-<script type="text/javascript" src="../static/js/userselect_allbook.js" ></script>
+<script type="text/javascript" src="../static/js/adminselect_alluser.js" ></script>

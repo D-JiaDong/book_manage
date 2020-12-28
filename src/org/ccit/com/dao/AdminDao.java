@@ -24,8 +24,6 @@ public class AdminDao {
     public Admin Adminlogin(Admin loginAdmin){
         try {
             //1.编写sql
-            System.out.println(loginAdmin.getAdm_name());
-            System.out.println(loginAdmin.getAdm_pwd());
             String sql = "select * from t_admin where Adm_name = ? and Adm_pwd = ?";
             //2.调用query方法
             Admin Admin = template.queryForObject(sql,

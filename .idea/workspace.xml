@@ -6,199 +6,57 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f5cbb43-7f2c-403c-9a5c-3b37ad050c66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/dao/AdminDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/AdmainLoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/book/Select_AllBookServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/newUserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/user/checkUserNameServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/newuser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/bootstrap/bootstrap-fileinput/fileinput.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/bootstrap/bootstrap-fileinput/fileinput.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/bootstrap/bootstrap-fileinput/locales/zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/static/js/select_allbook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/user/select_book.jsp" afterDir="false" />
+    <list default="true" id="5f5cbb43-7f2c-403c-9a5c-3b37ad050c66" name="Default Changelist" comment="2020/12/28 基本完成大致需求">
+      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/dao/BookTypeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/dao/UserToBookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/admin/AdminLoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/admin/Select_AllUser_BookServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/book/Select_AllBookForAlterServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/book/Select_AlltypeForAlterServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/book/Select_ISborrowBookServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/user/Select_AllUserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin/alter_book.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin/alter_booktype.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin/borrow_book_manage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin/bottom.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin/select_book.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin/select_user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/image/背景.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/js/ISborrow_book.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/js/adminselect_allbook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/js/adminselect_alluser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/js/alter_book.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/js/alter_booktype.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/js/borrow_allbook_manage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/js/userMainBook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/js/userselect_allbook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/user/ISborrow_book.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/user/borrow_book.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_manage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/book_manage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ccit/com/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ccit/com/dao/AdminDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ccit/com/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ccit/com/dao/BookDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ccit/com/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ccit/com/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ccit/com/domain/packaging/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ccit/com/domain/packaging/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ccit/com/domain/packaging/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ccit/com/domain/packaging/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/SuccessServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/SuccessServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/UserLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/UserLoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ccit/com/domain/packaging/User_to_Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ccit/com/domain/packaging/User_to_Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/FailServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/SuccessServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/book/BookListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/book/BookListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/blog/blog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/blog/blogclass.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/blog/updateblog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/blog/writeblog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/bottom.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/bottom.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/left.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/book/Select_AllBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ccit/com/web/servlet/book/Select_AllBookServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/bottom.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/left.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/topbar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/druid-1.1.21.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/jackson/jackson-annotations-2.2.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jackson/jackson-annotations-2.2.3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/jackson/jackson-core-2.2.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jackson/jackson-core-2.2.3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/jackson/jackson-databind-2.2.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jackson/jackson-databind-2.2.3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/javax.annotation.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.annotation.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/javax.ejb.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.ejb.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/javax.jms.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.jms.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/javax.persistence.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.persistence.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/javax.resource.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.resource.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/javax.servlet.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.servlet.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/javax.servlet.jsp.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/javax.servlet.jsp.jstl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/javax.transaction.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.transaction.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/json/commons-beanutils-1.9.3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/json/commons-beanutils-1.9.3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/json/commons-collections4-4.4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/json/commons-collections4-4.4.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/json/commons-io-2.7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/json/commons-io-2.7.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/json/commons-lang3-3.10.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/json/commons-lang3-3.10.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/json/ezmorph-1.0.6.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/json/ezmorph-1.0.6.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/json/json-20200518.jar" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/json/json-20200518.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/blog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/blogclass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/frontblog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/frontmyblog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/js/book.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/js/book.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/role.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/updateblog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/upload/IMG_0026.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/writeblog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user/blog/blog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user/blog/blogclass.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user/blog/updateblog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user/blog/writeblog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user/book/book.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user/bookshow.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/newuser.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/newuser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/js/book.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/js/adminMainBook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/js/select_allbook.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/js/borrow_allbook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user/bookshow.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/user/bookshow.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user/bottom.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/user/bottom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/user/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/user/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/user/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/user/left.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user/myblogshow.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user/sysmgr/updateuser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user/sysmgr/userinfo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/user/viewblog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/css/icons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/css/theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/fonts/boxicons.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/fonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/fonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/fonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/fonts/materialdesignicons-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/404-error.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/500-error.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/flags/germany.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/flags/italy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/flags/russia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/flags/spain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/flags/us.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/logo-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/logo-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/maintenance.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/media/sm-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/media/sm-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/media/sm-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/media/sm-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/media/sm-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/media/sm-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/media/sm-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/team/team-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/team/team-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/team/team-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/team/team-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/team/team-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/team/team-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/team/team-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/team/team-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/users/avatar-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/users/avatar-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/users/avatar-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/users/avatar-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/users/avatar-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/users/avatar-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/users/avatar-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/images/users/avatar-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/js/metismenu.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/js/simplebar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/js/theme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/js/waves.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/advanced-plugins-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/calendar-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/chartjs-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/dashboard-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/datatables-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/fileuploads-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/fontawesome.init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/google-chart-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/knob-chart-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/mask-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/materialdesign.init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/morris-chart-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/quilljs-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/sparklines-chart-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/sweet-alert-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/validation-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/assets/pages/vectormap-demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/calendar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/charts-chartjs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/charts-google.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/charts-knob.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/charts-morris.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/charts-sparkline.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/dark-sidenav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/forms-elements.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/forms-mask.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/forms-plugins.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/forms-quilljs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/forms-uploads.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/forms-validation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/icons-boxicons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/icons-fontawesome.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/icons-materialdesign.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/maps-google.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/maps-vector.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/pages-404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/pages-500.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/pages-faqs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/pages-invoice.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/pages-lock-screen.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/pages-login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/pages-maintenance.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/pages-pricing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/pages-recoverpw.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/pages-register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/pages-starter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/tables-basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/tables-datatables.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/team.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-buttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-cards.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-carousel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-embeds.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-general.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-grid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-media-objects.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-modals.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-progressbars.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-scrollspy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-spinners.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-sweetalerts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-tabs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-toasts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-tooltips-popovers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vertical/ui-typography.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/user/select_book.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/user/select_book.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +68,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -242,7 +101,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../databse_learn/Books_management_system" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/static/image" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -252,27 +111,33 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20114942" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\static\image" />
+      <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\static\js" />
+      <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\user" />
+      <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\admin" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.ccit.com.web.servlet.book" />
+      <recent name="org.ccit.com.web.servlet.user" />
+      <recent name="org.ccit.com.dao" />
+      <recent name="org.ccit.com.web.servlet.admin" />
+      <recent name="org.ccit.com.web.servlet" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\static\image" />
+      <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\admin" />
       <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\static\bootstrap\bootstrap-fileinput\locales" />
       <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\static\bootstrap\bootstrap-fileinput" />
       <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\static\bootstrap" />
-      <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\WEB-INF\lib" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.ccit.com.dao" />
-      <recent name="org.ccit.com.web.servlet" />
-      <recent name="org.ccit.com.web.servlet.book" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\admin" />
-      <recent name="D:\JetBrains_2020\IdeaProjects\JavaWeb-code\book_manage\web\user" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.374" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.374" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
@@ -433,38 +298,73 @@
       <workItem from="1608341752500" duration="13076000" />
       <workItem from="1608509467938" duration="272000" />
       <workItem from="1608510708565" duration="4409000" />
-      <workItem from="1608528570963" duration="8982000" />
+      <workItem from="1608528570963" duration="16075000" />
+      <workItem from="1608615907529" duration="14651000" />
+      <workItem from="1608690762384" duration="24000" />
+      <workItem from="1608690820094" duration="211000" />
+      <workItem from="1608691060496" duration="7396000" />
+      <workItem from="1608788056859" duration="13634000" />
+      <workItem from="1608872731671" duration="17682000" />
+      <workItem from="1608951711164" duration="34125000" />
+      <workItem from="1608993195199" duration="630000" />
+      <workItem from="1609133051668" duration="9164000" />
+      <workItem from="1609157143742" duration="247000" />
     </task>
+    <task id="LOCAL-00001" summary="2020/12/21">
+      <created>1608541187617</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608541187617</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2020/12/21" />
+    <MESSAGE value="2020/12/28 基本完成大致需求" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020/12/28 基本完成大致需求" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="586" y="198" key="#Inspections" timestamp="1608285830594">
+    <state x="478" y="378" key="#Custom_Plugin_Repositories" timestamp="1609140486025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1608285830594" />
+    <state x="478" y="378" key="#Custom_Plugin_Repositories/0.0.1920.1040@0.0.1920.1040" timestamp="1609140486025" />
+    <state x="586" y="198" key="#Inspections" timestamp="1609142999131">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1609142999131" />
     <state x="337" y="361" key="#SQL_Dialects" timestamp="1607438936348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="337" y="361" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1607438936348" />
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607427682624">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609144143530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607427682624" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143530" />
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1608344600641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608344600641" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608535903124">
+    <state x="682" y="157" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1609133090990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608535903124" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1608514857394">
+    <state x="682" y="157" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1920.1040@0.0.1920.1040" timestamp="1609133090990" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608696992606">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608514857394" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608696992606" />
+    <state x="333" y="86" key="CommitChangelistDialog2" timestamp="1609157457908">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="333" y="86" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1609157457908" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1609134349078">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609134349078" />
     <state x="817" y="417" key="Github.ShareDialog" timestamp="1607397357343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -473,61 +373,85 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="638" y="217" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607397375037" />
-    <state width="1601" height="201" key="GridCell.Tab.0.bottom" timestamp="1608535974628">
+    <state width="1632" height="345" key="GridCell.Tab.0.bottom" timestamp="1609144143775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974628" />
-    <state width="1601" height="201" key="GridCell.Tab.0.center" timestamp="1608535974628">
+    <state width="1632" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143775" />
+    <state width="1632" height="345" key="GridCell.Tab.0.center" timestamp="1609144143775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974628" />
-    <state width="1601" height="201" key="GridCell.Tab.0.left" timestamp="1608535974628">
+    <state width="1632" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143775" />
+    <state width="1632" height="345" key="GridCell.Tab.0.left" timestamp="1609144143774">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974628" />
-    <state width="1601" height="201" key="GridCell.Tab.0.right" timestamp="1608535974628">
+    <state width="1632" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143774" />
+    <state width="1632" height="345" key="GridCell.Tab.0.right" timestamp="1609144143775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974628" />
-    <state width="1601" height="201" key="GridCell.Tab.1.bottom" timestamp="1608535974628">
+    <state width="1632" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143775" />
+    <state width="1632" height="345" key="GridCell.Tab.1.bottom" timestamp="1609144143596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974628" />
-    <state width="1601" height="201" key="GridCell.Tab.1.center" timestamp="1608535974628">
+    <state width="1632" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143596" />
+    <state width="1632" height="345" key="GridCell.Tab.1.center" timestamp="1609144143596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974628" />
-    <state width="1601" height="201" key="GridCell.Tab.1.left" timestamp="1608535974628">
+    <state width="1632" height="345" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143596" />
+    <state width="1632" height="345" key="GridCell.Tab.1.left" timestamp="1609144143595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974628" />
-    <state width="1601" height="201" key="GridCell.Tab.1.right" timestamp="1608535974628">
+    <state width="1632" height="345" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143595" />
+    <state width="1632" height="345" key="GridCell.Tab.1.right" timestamp="1609144143596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974628" />
-    <state width="1601" height="201" key="GridCell.Tab.2.bottom" timestamp="1608535974629">
+    <state width="1632" height="345" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143596" />
+    <state width="1632" height="345" key="GridCell.Tab.2.bottom" timestamp="1609144143597">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974629" />
-    <state width="1601" height="201" key="GridCell.Tab.2.center" timestamp="1608535974629">
+    <state width="1632" height="345" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143597" />
+    <state width="1632" height="345" key="GridCell.Tab.2.center" timestamp="1609144143596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974629" />
-    <state width="1601" height="201" key="GridCell.Tab.2.left" timestamp="1608535974628">
+    <state width="1632" height="345" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143596" />
+    <state width="1632" height="345" key="GridCell.Tab.2.left" timestamp="1609144143596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974628" />
-    <state width="1601" height="201" key="GridCell.Tab.2.right" timestamp="1608535974629">
+    <state width="1632" height="345" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143596" />
+    <state width="1632" height="345" key="GridCell.Tab.2.right" timestamp="1609144143597">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1601" height="201" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608535974629" />
-    <state x="107" y="124" key="SettingsEditor" timestamp="1608532590947">
+    <state width="1632" height="345" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609144143597" />
+    <state width="1158" height="375" key="GridCell.Tab.5.bottom" timestamp="1609139172478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="107" y="124" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608532590947" />
+    <state width="1158" height="375" key="GridCell.Tab.5.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609139172478" />
+    <state width="1158" height="375" key="GridCell.Tab.5.center" timestamp="1609139172477">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1158" height="375" key="GridCell.Tab.5.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609139172477" />
+    <state width="1158" height="375" key="GridCell.Tab.5.left" timestamp="1609139172477">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1158" height="375" key="GridCell.Tab.5.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609139172477" />
+    <state width="1158" height="375" key="GridCell.Tab.5.right" timestamp="1609139172477">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1158" height="375" key="GridCell.Tab.5.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609139172477" />
+    <state x="107" y="124" key="SettingsEditor" timestamp="1609144075404">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="107" y="124" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1609144075404" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1608541105335">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608541105335" />
     <state x="658" y="411" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1607352569971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="658" y="411" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1607352569971" />
+    <state x="662" y="254" width="596" height="532" key="find.popup" timestamp="1608695258053">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="254" width="596" height="532" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608695258053" />
   </component>
 </project>

@@ -8,6 +8,12 @@
         <script type="text/javascript" src="/static/bootstrap/bootstrap-fileinput/fileinput.min.js"></script>
         <script type="text/javascript" src="/static/bootstrap/bootstrap-fileinput/locales/zh.js"></script>
         <link href="/static/bootstrap/bootstrap-fileinput/fileinput.min.css" rel="stylesheet" />
+        <style>
+            body{
+                background:cadetblue ;
+                background-size: 100% 100%;
+            }
+        </style>
 
     </head>
     <body>
@@ -65,14 +71,12 @@
                                 $("#user_fpic").change(function () {
                                     // 获取上传文件对象
                                     var file = $(this)[0].files[0];
-                                    alert(file.name)
                                     $("#picname").val(file.name)
                                     // 读取文件URL
                                     var reader = new FileReader();
                                     reader.readAsDataURL(file);
                                     // 阅读文件完成后触发的事件
                                     reader.onload = function () {
-                                        alert(this.result)
                                         // 读取的URL结果：this.result
                                         $("#picsrc").val(this.result)
                                         $("#user_pic").attr("src", this.result);

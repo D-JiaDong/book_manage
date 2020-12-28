@@ -81,4 +81,4 @@
     </body>
 </html>
 <%@include file="bottom.html"%>>
-<script type="text/javascript" src="../static/js/book.js" ></script>
+<script type="text/javascript" src="../static/js/userMainBook.js" ></script>

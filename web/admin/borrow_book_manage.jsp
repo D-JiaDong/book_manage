@@ -16,7 +16,6 @@
     </head>
     <body>
         <div class="main-content">
-        
             <div class="page-content">
                 <div class="container-fluid">
                     <!-- start page title -->
@@ -31,25 +30,32 @@
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <div class="form-group" style="display: inline;">
+                                                <label for="bookid"  class="control-label" style="display: inline;">图书ID:</label>
+                                                <input type="text" id="bookid" name="bookid" value="" class="form-control-sm" style="display: inline;"/>
+                                            </div>
+                                            <div class="form-group" style="display: inline;">
                                                 <label for="bookname"  class="control-label" style="display: inline;">书名:</label>
                                                 <input type="text" id="bookname" name="bookname" value="" class="form-control-sm" style="display: inline;"/>
                                             </div>
                 
                                             <div class="form-group" style="display: inline;">
-                                                <label for="bookauthor"  class="control-label" style="display: inline;">作者:</label>
+                                                <label for="bookauthor"  class="control-label" style="display: inline;">作者名:</label>
                                                 <input type="text" id="bookauthor" name="bookauthor" value="" class="form-control-sm" style="display: inline;"/>
+                                            </div>
+                                            <div class="form-group" style="display: inline;">
+                                                <label for="userid"  class="control-label" style="display: inline;">用户ID:</label>
+                                                <input type="text" id="userid" name="userid" value="" class="form-control-sm" style="display: inline;"/>
+                                            </div>
+                                            <div class="form-group" style="display: inline;">
+                                                <label for="username"  class="control-label" style="display: inline;">用户名:</label>
+                                                <input type="text" id="username" name="username" value="" class="form-control-sm" style="display: inline;"/>
                                             </div>
                                             
                                             <input type="hidden" name="currentPage" value="1"/>
-                                            <input type="hidden" name="blogId"/>
-                                            <input type="hidden" name="userId" value="{{ request.session.user.userId }}"/>
                                             <input type="hidden" name="opr" value="search"/>
                                             <div class="form-group" style="display: inline;">
                                                 <input type="reset" class="btn btn-default pull-left" onclick="clearSearch()" value="取消"/>
-                                                <%
-                                                    String opr = request.getParameter("opr");
-                                                %>
-                                                <input type="button" class="btn btn-primary" onclick="allbook(8,1,'<%= opr%>')" value="查询"/>
+                                                <input type="button" class="btn btn-primary"  value="查询" onclick="borrow_allbook_manage(8,1,'all','select',0,0)"/>
                                             </div>
                                         </div>
                                     </div>
@@ -67,13 +73,11 @@
                                         <table class="table activate-select dt-responsive nowrap table table-hover" >
                                             <thead>
                                             <tr>
-                                                <th>书籍ID</th>
-                                                <th>名称</th>
-                                                <th>简介</th>
-                                                <th>类型</th>
-                                                <th>作者</th>
-                                                <th>价格</th>
-                                                <th>数量</th>
+                                                <th>用户ID</th>
+                                                <th>用户名称</th>
+                                                <th>图书ID</th>
+                                                <th>图书名称</th>
+                                                <th>操作</th>
                                             </tr>
                                             </thead>
                                             <tbody id="bodyData">
@@ -114,8 +118,11 @@
 <%@include file="bottom.html"%>>
 <script>
     function clearSearch() {
-        document.bookForm.bookauthor.value = ""
+        document.bookForm.bookid.value = ""
         document.bookForm.bookname.value=""
+        document.bookForm.bookauthor.value = ""
+        document.bookForm.username.value=""
+        document.bookForm.userid.value = ""
     }
 </script>
-<script type="text/javascript" src="../static/js/userselect_allbook.js" ></script>
+<script type="text/javascript" src="../static/js/borrow_allbook_manage.js" ></script>

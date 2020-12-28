@@ -3,7 +3,9 @@ package org.ccit.com.web.servlet.book;
 
 
 import org.ccit.com.dao.BookDao;
+import org.ccit.com.dao.BookTypeDao;
 import org.ccit.com.domain.packaging.Book;
+import org.ccit.com.domain.packaging.Booktype;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -47,23 +49,28 @@ public class BookListServlet extends HttpServlet {
 
         int pageSize=object.getInt("pageSize");
         //热门查询
+
+
+
         BookDao bookDao = new BookDao();
-
-
-
         List<Book> books = bookDao.PopularBookList();
+        BookTypeDao bookTypeDao = new BookTypeDao();
+        List<Booktype> booktypes= bookTypeDao.BooktypeList();
+        JSONArray jsonArray_type=new JSONArray(booktypes);
+
+
         int count =books.size();
         int totalPage=count/pageSize;
         if(count%pageSize!=0){
             totalPage++;
         }
+
+
         JSONArray jsonArray=new JSONArray(books);
         response.setContentType("text/json;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-
-
-        JSONObject jsonObject= new JSONObject("{\'count\':"+count+", \'totalPage\':"+totalPage+", \'data\':"+jsonArray.toString()+"}");
+        JSONObject jsonObject= new JSONObject("{\'count\':"+count+", \'totalPage\':"+totalPage+", \'data\':"+jsonArray.toString()+", \'booktypes\':"+jsonArray_type.toString()+"}");
         out.write(jsonObject.toString());
         out.flush();
         out.close();

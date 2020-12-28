@@ -11,13 +11,19 @@
         <title>index</title>
         <script type="text/javascript" src="static/bootstrap/js/bootstrap.js" ></script>
         <link rel="stylesheet" href="static/bootstrap/css/bootstrap.css" />
+        <style>
+            body{
+                background:url("static/image/背景.jpg") ;
+                background-size: 100% 100%;
+            }
+        </style>
     </head>
     <body>
         
         <%
             String contextPath = request.getContextPath();
         %>
-        <h1 align="center">首页</h1>
+        <h1 align="center">图书借阅系统</h1>
         <div align="center">
             <a href="admin/login.html"class="btn btn-default ">管理员登陆</a>
             <a href="user/login.html" class="btn btn-default ">用户登陆</a>

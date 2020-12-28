@@ -1,9 +1,10 @@
-package org.ccit.com.web.servlet.book;
+package org.ccit.com.web.servlet.user;
 
 
 
 import org.ccit.com.dao.BookDao;
 import org.ccit.com.dao.BookTypeDao;
+import org.ccit.com.dao.UserDao;
 import org.ccit.com.domain.packaging.Book;
 import org.ccit.com.domain.packaging.Booktype;
 import org.ccit.com.domain.packaging.User;
@@ -21,14 +22,16 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.List;
 
+import static org.ccit.com.dao.UserDao.*;
+
 /****
  * @program: JavaWeb-code
  * @description
  * @author: Jiadong Duan
  * @create: 2020-11-11 11:15
  **/
-@WebServlet("/Select_AllBookServlet")
-public  class Select_AllBookServlet extends HttpServlet {
+@WebServlet("/Select_AllUserServlet")
+public  class Select_AllUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         /**
          * @Description: 从前端传回的数据 返回对应的book列表 和实现分页
@@ -47,37 +50,25 @@ public  class Select_AllBookServlet extends HttpServlet {
             respInt = insr.read();
         }
         JSONObject object = new JSONObject(result);
-        String type=object.getString("type");
         int book_id=0;
         String opr="select";
         int book_num = 0;
         int pageSize=object.getInt("pageSize");
-        try{
-            book_id=object.getInt("book_id");
-            opr=object.getString("opr");
-            book_num=object.getInt("book_num");
-        }catch (Exception e){
-        }
 
-        String bookauthor=object.getString("bookauthor");
-        String bookname=object.getString("bookname");
+        String username=object.getString("username");
+        String usertel=object.getString("usertel");
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("user");
         //借阅操作
-        BookDao bookDao = new BookDao();
-        int borrow_result=0;
-        if("borrow".equals(opr)&&book_num-1>=0){
-            borrow_result=bookDao.borrow_book(book_id,book_num-1,user.getUser_id());
-        }
-
-        List<Book> books = bookDao.select_BookList(type,bookname,bookauthor);
+        UserDao userDao = new UserDao();
+        List<User> users = userDao.select_UserList(username,usertel);
 
         BookTypeDao bookTypeDao = new BookTypeDao();
         List<Booktype> booktypes= bookTypeDao.BooktypeList();
         JSONArray jsonArray_type=new JSONArray(booktypes);
 
 
-        int count =books.size();
+        int count =users.size();
 
         int totalPage=count/pageSize;
         if(count%pageSize!=0){
@@ -86,12 +77,13 @@ public  class Select_AllBookServlet extends HttpServlet {
 
 
 
-        JSONArray jsonArray=new JSONArray(books);
+        JSONArray jsonArray=new JSONArray(users);
         response.setContentType("text/json;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-        JSONObject jsonObject= new JSONObject("{\'borrow_result\':"+borrow_result+",\'count\':"+count+", \'totalPage\':"+totalPage+", \'data\':"+jsonArray.toString()+", \'booktypes\':"+jsonArray_type.toString()+"}");
+        JSONObject jsonObject= new JSONObject("{\'count\':"+count+", \'totalPage\':"+totalPage+", \'data\':"+jsonArray.toString()+", \'booktypes\':"+jsonArray_type.toString()+"}");
         out.write(jsonObject.toString());
+        System.out.println(jsonObject.toString());
         out.flush();
         out.close();
     }
